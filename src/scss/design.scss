@@ -1,0 +1,33 @@
+.design {
+    background: #FFF url(../img/design/bg.png) no-repeat top center / cover;
+    &__tablet {
+        position: relative;
+        &__screen {
+            position: absolute;
+            left: 0;
+            z-index: 2;
+        }
+        &__image { 
+            display: block;   
+            margin: 0 auto;
+            padding: 18px 0 70px 0;
+        }
+    }
+    &__mobile {
+        display: inline-block;
+        position: absolute;
+        right: 18%;
+        bottom: -42px;
+        z-index: 2;
+        &__screen {
+            position: absolute;
+            z-index: 2;
+        }
+        &__image {
+            padding-left: 5px;
+        }
+    }
+    & .wrapper {
+        position: relative;
+    }
+}

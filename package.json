@@ -1,0 +1,26 @@
+{
+  "name": "mogo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel public/index.html --open",
+    "build": "parcel build public/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArgonTrime/mogo.git"
+  },
+  "author": "Ihar Trymailau (ihar.trymailau@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArgonTrime/mogo/issues"
+  },
+  "homepage": "https://github.com/ArgonTrime/mogo#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0",
+    "sass": "^1.55.0"
+  }
+}
