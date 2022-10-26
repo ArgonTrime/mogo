@@ -1,0 +1,20 @@
+.our-work {
+    &__content {
+        display: grid;
+        margin: 0 auto;
+        grid-template: repeat(2, 377px) / repeat(4, 1fr);
+        width: 1508px;
+        &__item {
+            position: relative;
+            &:hover {
+                .gradient-hover {
+                    opacity: 1;
+                }
+            }
+            &_double {
+                grid-column: 3;
+                grid-row: 1 / 3;
+            }
+        }
+    }
+}
