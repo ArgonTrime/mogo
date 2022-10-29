@@ -1,0 +1,46 @@
+$color-light-green: #95E1D3;
+.blog {
+    &__content {
+        padding: 4px 0 90px 0;
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+        &__item {
+            position: relative;
+            max-width: 370px;
+            & .activity {
+                display: flex;
+                gap: 50px;
+                margin-top: 30px;
+            }
+            span {
+                font-weight: 700;
+                font-size: 24px;
+                text-transform: uppercase;
+            }
+            &__date {
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                background-color: $color-light-green;
+                left: -14px;
+                top: 32%;
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                & span {
+                    color: #FFF;
+                    &:first-child {
+                        font-size: 36px;
+                        margin-bottom: 5px;
+                    }
+                    &:last-of-type {
+                        font-weight: 500;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

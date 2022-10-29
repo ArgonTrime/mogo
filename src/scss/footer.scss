@@ -1,0 +1,149 @@
+$color-grey: #C6CBCD;
+$color-light-green: #95E1D3;
+.footer {
+    &__content {
+        display: grid;
+        grid-template: 6fr 1fr / 4fr 5fr 3fr;
+        column-gap: 30px;
+        // row-gap: 42px;
+        padding-top: 78px;
+    }
+    &__mogo {
+        min-height: 455px;
+        p {
+            color: $color-grey;
+            &:first-of-type {
+                margin: 45px 0 42px 0;
+            }
+        }
+        &_italic {
+            margin: 0;
+            font-style: italic;
+            text-transform: uppercase;
+        }
+        &_bold {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+        }
+        &_k {
+            font-weight: 700;
+            margin-right: 5px;
+        }
+        &__follow-us {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0 46px 0;
+            padding-top: 10px;
+            border-top: 1px solid $color-grey;
+            span {
+                font-size: 13px;
+                font-style: italic;
+                color: $color-grey;
+            }
+            &__icons {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            &__subscribe {
+                display: flex;
+                height: 55px;
+                input {
+                    &[type="email"] {
+                        width: 65%;
+                        border: 1px solid $color-grey;
+                        padding-left: 10px;
+                        &::placeholder {
+                            text-align: center;
+                            padding: 20px 0;
+                            color: $color-grey;
+                        }
+                    }
+                    &[type="submit"] {
+                        background-color: $color-light-green;
+                        border: none;
+                        width: 35%;
+                        color: #FFF;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        padding: 0 16px;
+                        text-align: center;
+                        &:hover {
+                            background-color: #87D2C4;
+                        }
+                        &:active {
+                            background-color: #5C958A;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__blog {
+        &__title {
+            display: block;
+            font-weight: 700;
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            &__item {
+                display: flex;
+                &__text {
+                    margin-left: 30px;
+                    span {
+                        display: block;
+                        &:first-child {
+                            font-weight: 700;
+                            font-size: 18px;
+                            text-transform: uppercase;
+                        }
+                        &:last-of-type {
+                            font-size: 13px;
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__instagram {
+        display: flex;
+        flex-direction: column;
+        &__title {
+            font-weight: 700;
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        &__content {
+            display: grid;
+            grid-template: repeat(3, 3fr) / repeat(3, 3fr);
+        }
+        a {
+            padding: 35px 0;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+    }
+    &__copyright {
+        text-align: center;
+        grid-row: 2;
+        grid-column: 1 / 4;
+        border-top: 1px solid $color-grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+    }
+}

@@ -26,12 +26,11 @@ $color-hover-gradient: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba
 }
 
 .header {
+    background-color: rgb(243, 226, 206);
     & .wrapper {
         display: flex;
         justify-content: space-between;
     }
-    background-color: rgb(243, 226, 206);
-    
     &__navigation {
         display: flex;
         align-items: center;
@@ -129,11 +128,31 @@ $color-hover-gradient: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba
     }
 }
 
+.activity {
+    &__item {
+        display: inline-flex;
+        align-items: center;
+        a {
+            text-decoration: none;
+        }
+        span {
+            padding-left: 18px;
+            font-weight: 400;
+            font-size: 13px;
+        }
+        
+    }
+}
+
 @import url(./about-us.scss);
 @import url(./numbers.scss);
+@import url(./work-with.scss);
 @import url(./design.scss);
-@import url(./sevice.scss);
+@import url(./service.scss);
 @import url(./team.scss);
 @import url(./clients.scss);
 @import url(./our-work.scss);
 @import url(./people-say.scss);
+@import url(./blog.scss);
+@import url(./latest-blog.scss);
+@import url(./footer.scss);

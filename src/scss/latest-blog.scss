@@ -1,0 +1,12 @@
+$color-accent: #F38281;
+.latest-blog {
+    background: #FFF url(../img/blog/bg.png) no-repeat top center / cover;
+    & .section-heading {
+        span {
+            &:last-of-type {
+                margin-top: 30px;
+                color: $color-accent;
+            }
+        }
+    }
+}
