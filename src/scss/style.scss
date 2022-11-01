@@ -1,4 +1,7 @@
 @import url(./normalize.scss);
+@import url(../../node_modules/swiper/swiper.scss);
+// @import "~swiper/scss/bundle";
+// @import "swiper/scss/bundle";
 
 // font-family: 'Kaushan Script', cursive;
 // font-family: 'Montserrat', sans-serif;
@@ -18,6 +21,73 @@ $color-hover-gradient: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba
     // line-height: 21px;
     color: $color-font-black;
 }
+h1 {
+    font-weight: 700;
+    font-size: 144px;
+}
+h2 {
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 400;
+    font-size: 64px;
+}
+.btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    color: #FFF;
+    border: 4px solid #FFF;
+    padding: 24px 100px;
+    transition: all 0.5s ease;
+    &:hover {
+        color: #E4BE8D;
+        background-color: #FFF;
+    }
+    &:active {
+        color: #E4BE8D;
+        background-color: #FFF;
+        border: 4px solid #E4BE8D;
+    }
+}
+.btn-pagination {
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F9EFCF;
+    min-width: 270px;
+    border-top: 4px solid #F9EFCF;
+    padding: 30px 0;
+    position: relative;
+    &:active {
+        color: #FFF;
+        border-top: 4px solid #FFF;
+        & .btn-pagination__active-line {
+            opacity: 1;
+        }
+        &>span {
+            color: #FFF;
+        }
+    }
+    &>span {
+        font-weight: 700;
+        font-size: 36px;
+        color: #F9EFCF;
+        &:active {
+            color: #FFF;
+        }
+    }
+    &__active-line {
+        opacity: 0;
+        width: 70px;
+        height: 4px;
+        background-color: $color-accent;
+        position: absolute;
+        top: -4px;
+        left: 0;
+        z-index: 2;
+    }
+}
 
 .wrapper {
     width: 1170px;
@@ -25,56 +95,16 @@ $color-hover-gradient: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba
     margin: 0 auto;
 }
 
-.header {
-    background-color: rgb(243, 226, 206);
-    & .wrapper {
-        display: flex;
-        justify-content: space-between;
-    }
-    &__navigation {
-        display: flex;
-        align-items: center;
-        a {
-            font-weight: 600;
-            font-size: 14px;
-            margin: 40px;
-            text-decoration: none;
-            color: #FFF;
-            text-transform: uppercase;
-            position: relative;
-            &:hover {
-                color: $color-active;
-                &::before {
-                    content: "";
-                    position: absolute;
-                    display: block;
-                    width: 180%;
-                    left: -40%;
-                    bottom: -8px;
-                    height: 1px;
-                    background-color: $color-active;
-                }
-            }
-        }
-    }
-    &__icons {
-        display: flex;
-        a {
-            margin: 40px 20px;
-            &:hover {
-                &::before {
-                    display: none;
-                }
-            }
-        }
-    }
-}
-
 .section-heading {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 70px 0 38px 0;
+    h1 {
+        text-transform: uppercase;
+        text-align: center;
+        max-width: 890px;
+    }
     span {
         display: block;
         &:first-child {
@@ -144,6 +174,47 @@ $color-hover-gradient: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba
     }
 }
 
+.comments-swiper {
+    &_light-gray {
+        background-color: #F8F8F8;
+    }
+    &_our-work {
+        margin: 82px 0;
+    }
+    &__content {
+        // overflow: hidden;
+        padding: 45px 0;
+        &__item {
+            display: flex;
+            &__text {
+                padding-left: 30px;
+                p {
+                    margin: 10px 0 25px 0;
+                    font-weight: 500;
+                    font-size: 24px;
+                    color: #A9AFB1;
+                    font-style: italic;
+                }
+            }
+            &__name {
+                display: flex;
+                align-items: center;
+                span {
+                    font-family: 'Kaushan Script', cursive;
+                    font-size: 30px;
+                    margin-left: 56px;
+                }
+            }
+            &__separator {
+                width: 70px;
+                height: 4px;
+                background-color: $color-accent;
+            }
+        }
+    }
+}
+
+@import url(./header.scss);
 @import url(./about-us.scss);
 @import url(./numbers.scss);
 @import url(./work-with.scss);

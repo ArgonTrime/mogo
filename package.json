@@ -2,7 +2,7 @@
   "name": "mogo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "scr/js/script.js",
   "scripts": {
     "start": "parcel public/index.html --open",
     "build": "parcel build public/index.html",
@@ -22,5 +22,8 @@
     "@parcel/transformer-sass": "^2.7.0",
     "parcel": "^2.7.0",
     "sass": "^1.55.0"
+  },
+  "dependencies": {
+    "swiper": "^8.4.4"
   }
 }
