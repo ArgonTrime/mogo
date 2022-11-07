@@ -1,5 +1,6 @@
 $color-grey: #C6CBCD;
 $color-light-green: #95E1D3;
+$color-font-black: #2D3033;
 .footer {
     &__content {
         display: grid;
@@ -14,6 +15,9 @@ $color-light-green: #95E1D3;
             color: $color-grey;
             &:first-of-type {
                 margin: 45px 0 42px 0;
+            }
+            &:last-of-type {
+                color: $color-font-black;
             }
         }
         &_italic {

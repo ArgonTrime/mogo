@@ -16,13 +16,11 @@
                 align-items: flex-start;
                 padding: 0;
                 padding-left: 50px;
+                h3 {
+                    text-transform: uppercase;
+                    margin: 0;
+                }
                 span {
-                    &:first-child {
-                        font-family: 'Raleway', sans-serif;
-                        font-weight: 700;
-                        font-size: 24px;
-                        text-transform: uppercase;
-                    }
                     &:last-of-type {
                         font-weight: 400;
                         font-size: 18px;

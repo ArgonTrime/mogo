@@ -2,9 +2,6 @@ $color-grey: #C6CBCD;
 $color-light-green: #95E1D3;
 $color-accent: #F38281;
 
-// .color {
-//     fill: $color-light-green;
-// }
 .service__content {
     display: flex;
     column-gap: 30px;
@@ -18,6 +15,11 @@ $color-accent: #F38281;
     &__item {
         border: 1px solid $color-grey;
         max-height: 255px;
+        &[open] &__title::after {
+            content: url(../img/service/arrow-up.svg);
+            position: absolute;
+            right: 20px;
+        }
         &__title {
             position: relative;
             font-weight: 700;
@@ -37,19 +39,26 @@ $color-accent: #F38281;
         }
         &__text {
             border-top: 1px solid $color-grey;
-            max-height: 119px;
+            max-height: 162px;
             overflow: auto;
             text-overflow: hidden;
             overflow-x: hidden;
+            &::-webkit-scrollbar {
+                background-color: #F5F5F5;
+                width: 7px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: $color-light-green;
+            }
             &>p {
                 margin: 0;
-                padding: 22px;
+                padding: 15px;  
             }
         }
     }
-    &__item[open] &__item__title::after {
-        content: url(../img/service/arrow-up.svg);
-        position: absolute;
-        right: 20px;
-    }
+    // &__item[open] &__item__title::after {
+    //     content: url(../img/service/arrow-up.svg);
+    //     position: absolute;
+    //     right: 20px;
+    // }
 }
